@@ -23,7 +23,6 @@ import pickle
 model = pickle.load(open('model.pkl', 'rb'))
 
 ## Model Performance
-## Model Performance
 
 The models were evaluated based on Mean Absolute Error (MAE), Mean Squared Error (MSE), R² Score, and Cross-Validated RMSE. Below is a summary of the results:
 
