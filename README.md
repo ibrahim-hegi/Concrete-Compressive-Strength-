@@ -16,23 +16,28 @@ The notebook `Concrete Compressive Strength.ipynb` explores multiple regression 
 ## Dependencies
 
 To run the notebook, install the required Python packages:
-
-```bash
 pip install numpy pandas matplotlib scikit-learn xgboost
 
-## Load the Saved Model: The best model is saved as model.pkl. You can load it for predictions:
+## Load the Saved Model
 import pickle
 model = pickle.load(open('model.pkl', 'rb'))
 
-Model Performance
-The models were evaluated based on MAE, MSE, R² Score, and Cross-Validated RMSE. Below is a summary of the results:
+## Model Performance
+## Model Performance
 
-Model	MAE	MSE	R² Score	RMSE (Cross Validated)
-XGBRegressor (GridSearch)	2.8279	19.7840	0.9337	9.1701
-XGBRegressor	2.7382	20.5965	0.9310	9.6405
-RandomForestRegressor	3.4732	27.3795	0.9082	10.2781
-Ridge	8.6850	121.2165	0.5937	10.7492
-LinearRegression	8.6831	121.1918	0.5938	10.7538
-Lasso	9.0980	133.5093	0.5525	10.9195
-SVR	8.2723	115.9420	0.6114	11.5979
-The XGBRegressor (GridSearch) achieved the best performance with the lowest RMSE and highest R² Score.
+The models were evaluated based on Mean Absolute Error (MAE), Mean Squared Error (MSE), R² Score, and Cross-Validated RMSE. Below is a summary of the results:
+
+| Model                     | MAE       | MSE        | R² Score | RMSE (Cross Validated) |
+|---------------------------|-----------|------------|----------|------------------------|
+| XGBRegressor (GridSearch) | 2.8279    | 19.7840    | 0.9337   | 9.1701                |
+| XGBRegressor              | 2.7382    | 20.5965    | 0.9310   | 9.6405                |
+| RandomForestRegressor     | 3.4732    | 27.3795    | 0.9082   | 10.2781               |
+| Ridge                     | 8.6850    | 121.2165   | 0.5937   | 10.7492               |
+| LinearRegression          | 8.6831    | 121.1918   | 0.5938   | 10.7538               |
+| Lasso                     | 9.0980    | 133.5093   | 0.5525   | 10.9195               |
+| SVR                       | 8.2723    | 115.9420   | 0.6114   | 11.5979               |
+
+The **XGBRegressor (GridSearch)** achieved the best performance with the lowest RMSE and highest R² Score.
+
+
+
